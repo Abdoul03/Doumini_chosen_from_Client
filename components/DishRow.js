@@ -12,6 +12,18 @@ const DishRow = ({ item }) => {
 
   const Dininue = () => {
     setNbr((nbr) => nbr - 1);
+
+
+    
+    const [ttl, setttl] = useState(0);
+
+
+    {item.map((nbr, index) => (
+      <DishRow item={{ ...dish }} key={index} />
+    ))}
+    setttl((ttl) => ttl + 1)
+
+
   };
 
   return (
